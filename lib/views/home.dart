@@ -38,15 +38,7 @@ class _HomeState extends State<Home> {
           Container(
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  colors: [
-                    const Color(0xff213A50),
-                    const Color(0xff071930),
-                  ],
-                  begin: FractionalOffset.topRight,
-                  end: FractionalOffset.bottomLeft),
-            ),
+            color: Colors.black,
           ),
           SingleChildScrollView(
             child: Container(
@@ -62,17 +54,19 @@ class _HomeState extends State<Home> {
                         : MainAxisAlignment.center,
                     children: [
                       Text(
-                        "AppGuy",
+                        "Chef",
                         style: TextStyle(
-                            fontSize: 18,
+                            fontSize: 25,
+                            letterSpacing: 1.5,
                             color: Colors.white,
                             fontWeight: FontWeight.w500,
                             fontFamily: 'Overpass'),
                       ),
                       Text(
-                        "Recipes",
+                        "Pad",
                         style: TextStyle(
-                            fontSize: 18,
+                            fontSize: 25,
+                            letterSpacing: 1.5,
                             color: Colors.blue,
                             fontWeight: FontWeight.w500,
                             fontFamily: 'Overpass'),
@@ -83,7 +77,7 @@ class _HomeState extends State<Home> {
                     height: 60,
                   ),
                   Text(
-                    "What will you cook today?",
+                    "What would you like to cook today?",
                     style: TextStyle(
                         fontSize: 20,
                         color: Colors.white,
@@ -94,7 +88,7 @@ class _HomeState extends State<Home> {
                     height: 8,
                   ),
                   Text(
-                    "Just Enter Ingredients you have and we will show the best recipe for you",
+                    "Just tell us the ingredients you have and we will show you the best recipes for you",
                     style: TextStyle(
                         fontSize: 15,
                         color: Colors.white,
@@ -151,9 +145,6 @@ class _HomeState extends State<Home> {
                         ),
                       ],
                     ),
-                  ),
-                  SizedBox(
-                    height: 30,
                   ),
                   Container(
                     child: GridView(

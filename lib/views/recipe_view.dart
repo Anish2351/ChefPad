@@ -39,30 +39,27 @@ class _RecipeViewState extends State<RecipeView> {
                   top: Platform.isIOS ? 60 : 30,
                   right: 24,
                   left: 24,
-                  bottom: 16),
+                  bottom: 13),
               width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [const Color(0xff213A50), const Color(0xff071930)],
-                  // begin: FractionalOffset.topRight,
-                  // end: FractionalOffset.bottomLeft,
-                ),
-              ),
+              color: Colors.black,
               child: Row(
                 mainAxisAlignment:
                     kIsWeb ? MainAxisAlignment.start : MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    "AppGuy",
+                    "Chef",
                     style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 25,
+                        letterSpacing: 1.5,
                         color: Colors.white,
+                        fontWeight: FontWeight.w500,
                         fontFamily: 'Overpass'),
                   ),
                   Text(
-                    "Recipes",
+                    "Pad",
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 25,
+                      letterSpacing: 1.5,
                       color: Colors.blue,
                       fontFamily: 'Overpass',
                     ),
@@ -72,7 +69,7 @@ class _RecipeViewState extends State<RecipeView> {
             ),
             Container(
               height: MediaQuery.of(context).size.height -
-                  (Platform.isIOS ? 104 : 80),
+                  (Platform.isIOS ? 104 : 95),
               width: MediaQuery.of(context).size.width,
               child: WebView(
                 onPageFinished: (val) {
